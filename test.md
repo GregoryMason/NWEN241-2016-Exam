@@ -120,4 +120,48 @@
 ---
 
 </details>
+<br><br>
+  
+---
+Question 3. Bitwise Operators and Data Structures [20 Marks]
+<details style="color:brown">
+  <summary style="color:black">
+  <b>(a) [10 Marks]</b> In the following, we have defined a structure type named <span style="font-family:monospace">charNode</span>:<br>
+  <span style="font-family:monospace;line-height:0">
+    #define node_size sizeof(charNode)<br>
+    typedef struct charNode charNode;<br>
+    typedef charNode *ptr_charNode;<br><br>
+    struct charNode {<br>
+    &nbsp;&nbsp;char data;<br>
+    &nbsp;&nbsp;ptr_charNode next;<br>
+    };<br><br>
+  </span>
+  Write a function with prototype <span style="font-family:monospace">ptr_charNode charList(char *)</span>, which creates a <span style="font-family:monospace">charNode</span> for each character in a string and links the nodes in sequence, and returns a pointer to the first node of the resulting list.
+  </summary>
+  
+---
+---
+
+</details>
+<br>
+<details style="color:brown">
+  <summary style="color:black">
+  <b>(b) [10 Marks]</b> See the program below.<br>
+  <span style="font-family:monospace;line-height:0">
+    int main(void)<br>
+    {<br>
+    &nbsp;&nbsp;int age[] = {8, 2, 6, ..., 12, 15, 11};<br>
+    &nbsp;&nbsp;...<br>
+    &nbsp;&nbsp;int *ageInt = calloc(m, sizeof(int));<br>
+    &nbsp;&nbsp;...<br>
+    &nbsp;&nbsp;return 0;<br>
+    }<br><br>
+  </span>
+  In the box below, complete this program. Assume that the ages in the array <span style="font-family:monospace">age</span> are between 0 - 15. Pack all the ages into the memory space allocated to <b style="font-family:monospace">ageInt</b>. You need to minimise the memory space required for packing, that is, you need to minimise the value of <b style="font-family:monospace">m</b>. The ages need to be packed in order from high-order bits to low-order bits in the memory space. Assume that you are working on a 32-bit machine where the <b style="font-family:monospace">sizeof(int)</b> is <b>4 bytes</b>.
+  </summary>
+  
+---
+---
+
+</details>
 <br>
