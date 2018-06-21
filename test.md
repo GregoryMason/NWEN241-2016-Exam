@@ -123,7 +123,7 @@
 <br><br>
   
 ---
-Question 3. Bitwise Operators and Data Structures [20 Marks]
+## Question 3. Bitwise Operators and Data Structures [20 Marks]
 <details style="color:brown">
   <summary style="color:black">
   <b>(a) [10 Marks]</b> In the following, we have defined a structure type named <span style="font-family:monospace">charNode</span>:<br>
@@ -158,6 +158,132 @@ Question 3. Bitwise Operators and Data Structures [20 Marks]
     }<br><br>
   </span>
   In the box below, complete this program. Assume that the ages in the array <span style="font-family:monospace">age</span> are between 0 - 15. Pack all the ages into the memory space allocated to <b style="font-family:monospace">ageInt</b>. You need to minimise the memory space required for packing, that is, you need to minimise the value of <b style="font-family:monospace">m</b>. The ages need to be packed in order from high-order bits to low-order bits in the memory space. Assume that you are working on a 32-bit machine where the <b style="font-family:monospace">sizeof(int)</b> is <b>4 bytes</b>.
+  </summary>
+  
+---
+---
+
+</details>
+<br><br>
+  
+---
+## Question 4. Python Fundamentals  [20 Marks]
+<div></div>
+<b>a) [5 Marks]</b> Some of the following strings are legal Python identifiers and some are not. For each one state if the name is legal and if not, explain why:
+<details style="color:brown">
+  <summary style="color:black">
+  <span style="font-family:monospace">i) total_time</span>
+  </summary>
+  
+---
+---
+
+</details>
+<details style="color:brown">
+  <summary style="color:black">
+  <span style="font-family:monospace">ii) pass</span>
+  </summary>
+  
+---
+---
+
+</details>
+<details style="color:brown">
+  <summary style="color:black">
+  <span style="font-family:monospace">iii) 2nd_day</span>
+  </summary>
+  
+---
+---
+
+</details>
+<details style="color:brown">
+  <summary style="color:black">
+  <span style="font-family:monospace">iv) numberOfVisits</span>
+  </summary>
+  
+---
+---
+
+</details>
+<details style="color:brown">
+  <summary style="color:black">
+  <span style="font-family:monospace">v) user-count</span>
+  </summary>
+  
+---
+---
+
+</details>
+<br>
+<b>b) [5 Marks]</b> Consider the following python code:<br>
+<span style="font-family:monospace;line-height:0">
+  #!/usr/bin/env python3<br><br>
+  firstList = [5, 15, 2, 22]<br>
+  firstList.sort()<br>
+  firstList.append(20)<br>
+  secondList = firstList[2:]<br>
+</span><br>
+What would the output be from the following python commands?<br>
+<details style="color:brown">
+  <summary style="color:black">
+  <span style="font-family:monospace">i) print(firstList)</span>
+  </summary>
+  
+---
+---
+
+</details>
+<details style="color:brown">
+  <summary style="color:black">
+  <span style="font-family:monospace">ii) print(len(secondList))</span>
+  </summary>
+  
+---
+---
+
+</details>
+<details style="color:brown">
+  <summary style="color:black">
+  <span style="font-family:monospace">iii) print(firstList == secondList)</span>
+  </summary>
+  
+---
+---
+
+</details>
+<details style="color:brown">
+  <summary style="color:black">
+  <span style="font-family:monospace">iv) print(firstList[-1])</span>
+  </summary>
+  
+---
+---
+
+</details>
+<details style="color:brown">
+  <summary style="color:black">
+  <span style="font-family:monospace">v) print(firstList + secondList)</span>
+  </summary>
+  
+---
+---
+
+</details>
+<br>
+<b>c) [10 Marks]</b> For each of the following Python keywords, briefly explain what it does and write a short piece of code to illustrate its use.
+<details style="color:brown">
+  <summary style="color:black">
+  <span style="font-family:monospace">i) elif</span>
+  </summary>
+  
+---
+---
+
+</details>
+<details style="color:brown">
+  <summary style="color:black">
+  <span style="font-family:monospace">ii) with</span>
   </summary>
   
 ---
