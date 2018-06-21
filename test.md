@@ -1,4 +1,4 @@
-## Question 1. C General Questions
+## Question 1. C General Questions [20 Marks]
 <details style="color:brown">
   <summary style="color:black">
   <b>(a) [4 Marks]</b> Explain the four steps of compilation for C programs.
@@ -18,4 +18,24 @@
 ---
 
 </details>
-<br/>
+<br>
+<details style="color:brown">
+  <summary style="color:black">
+  <b>(c) [6 Marks]</b> Explain the difference between Java Class objects and C Structure variables.
+  </summary>
+  
+---
+---
+
+</details>
+<br>
+<details style="color:brown">
+  <summary style="color:black">
+  <b>(c) [4 Marks]</b> Discuss pass-by-value and pass-by-reference in C and Java.
+  </summary>
+  
+---
+---
+
+</details>
+<br>
