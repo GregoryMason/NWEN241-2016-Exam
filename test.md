@@ -275,8 +275,7 @@ int main(void) {
 
 ---
 </details><br>
-<b>Note:</b> "we didn't talk about packing so I can't give you this kind of 
-question" - Alvin
+<span style="color:blue"><b>Note:</b> "we didn't talk about packing so I can't give you this kind of question" - Alvin</span>
 <br><br>
   
 ---
