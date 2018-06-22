@@ -213,6 +213,28 @@ int main(int argc, char *argv[]) {
   </summary>
   
 ---
+```c
+ptr_charNode charList(char *str) {
+	if (str[0] == '\0') return NULL;
+
+	ptr_charNode head = malloc(node_size);
+
+	ptr_charNode tail = head;
+	tail->data = str[0];
+
+	int i = 1;
+	while (str[i] != '\0') {
+		tail->next = malloc(node_size);
+		tail = tail->next;
+		tail->data = str[i];
+		i++;
+	}
+	tail->next = NULL;
+
+	return head;
+}
+```
+
 ---
 
 </details>
@@ -234,9 +256,27 @@ int main(int argc, char *argv[]) {
   </summary>
   
 ---
----
+```c
+int main(void) {
+	int age[] = {8, 2, 6, ..., 12, 15, 11};
+	int numAges = sizeof(age)/sizeof(int);
+	int m = numAges/8 + (numAges%8? 1:0);
 
-</details>
+	int* ageInt = calloc(m, sizeof(int));
+
+	for (int i = 0, count = 0; i < m; ++i) {
+		for (int j = 0; j < 8 && count++ < numAges; ++j) {
+			ageInt[i] += (age[(i*8)+j] & 0xFF) << (28-(j*4));
+		}
+	}
+	return 0;
+}
+```
+
+---
+</details><br>
+<b>Note:</b> "we didn't talk about packing so I can't give you this kind of 
+question" - Alvin
 <br><br>
   
 ---
