@@ -23,13 +23,13 @@ Any questions about the content or answers in this exam are (probably) best aske
 <br>
 <details style="color:brown">
   <summary style="color:black">
-  <b>(b) [6 Marks]</b> Explain how the Stack, Heap and Data Segment sections are used in program memory and how those sections relate to compile-time or run-time memory allocation.
+  <b>(b) [6 Marks]</b> Explain how the Stack, Heap and Data Segment sections are used in program memory and how these sections relate to compile-time or run-time memory allocation.
   </summary>
   
 ---
-* **Stack** <br>Used at run time to track the program as it's running. Each time a function is called a 'stack frame' gets added to the stack which contains all the automatic/temporary variables and other information relating to that instance of the function being called. Stack frames must at minimum contain a return address denoting where the program should return to once the frame is fulfilled.
+* **Stack** <br>Used at run-time to track the program as it's running. Each time a function is called a 'stack frame' gets added to the stack which contains all the automatic/temporary variables and other information relating to that instance of the function being called. Stack frames must at minimum contain a return address denoting where the program should return to once the frame is fulfilled.
 * **Heap** <br>Used for dynamic memory allocation in run-time. Memory in the Heap is managed through the use of <span style="font-family:monospace">malloc</span>, <span style="font-family:monospace">realloc</span>, <span style="font-family:monospace">calloc</span>, and <span style="font-family:monospace">free</span>.
-* **Data Segment** <br>Stores the values for all global variables and static variables. Split into 2 segments: "initialized" for variables that are declared with specific starting values, and "uninitialized" for variables that don't have specified starting values.
+* **Data Segment** <br>Stores the values for all global variables and static variables at compile-time. It is split into 2 segments: "initialized" for variables that are declared with specific starting values, and "uninitialized" for variables that don't have specified starting values.
 
 ---
 
@@ -41,7 +41,7 @@ Any questions about the content or answers in this exam are (probably) best aske
   </summary>
   
 ---
-C Structures are only a collection of different data types, whilst Java Class objects can also have associated methods, can have various restrictions for variable and method access (eg "private", "protected"), and can utilise inheritance.<br>
+C Structures are a collection of different data types/values, whilst Java Class objects can also: have associated methods, have various restrictions for variable and method access (eg "private", "protected"), and utilise inheritance.<br>
 Java also creates class objects as references, whilst C creates Structures as values. (You would use pointers to structs in C to create the same effect of references.)
 
 ---
@@ -54,9 +54,9 @@ Java also creates class objects as references, whilst C creates Structures as va
   </summary>
   
 ---
-Java manipulates objects by reference, where all object variables are references. However for method arguments they're passed by value, or more specifically it passes the value of the reference, not the reference itself or the object/value it's pointing to. This means it creates a new, independent, reference to the same object/values as what's passed in.<br><br>
-C is strictly pass-by-value. If you with to pass a reference into a function then you would pass a pointer, and dereference that pointer to get the value it's pointing to.<br>
-*Note: That pointer is still passed into to the function by value (the location it's pointing at).*
+Java manipulates objects by reference, where all object variables are references. However for method arguments, they're passed by value, or more specifically it passes the value of the reference, not the reference itself, or the object/value it's pointing to. This means it creates a new, independent, reference to the same object/values as what's passed in.<br><br>
+C is strictly pass-by-value. If you with to pass a reference into a function then you would pass a pointer, and then dereference that pointer to get the value it's pointing to.<br>
+*Note: That pointer is still passed into to the function by value (I.E. it passes the location it's pointing at).*
 
 ---
 
@@ -126,7 +126,7 @@ int *p();
   
 ---
 ```c
-char **p(int* a, int** b);
+char **p(int *a, int **b);
 ```
 
 ---
@@ -146,7 +146,7 @@ char **p(int* a, int** b);
     printStr(ptr,n);<br>
   </span>
   Define the <span style="font-family:monospace">int</span> variable <span style="font-family:monospace">n</span>, declare variable <span style="font-family:monospace">ptr</span>, and implement function <span style="font-family:monospace">printStr</span> so that <span style="font-family:monospace">printStr(ptr,n)</span> prints out the three strings in the following format:<br>
-  <span style="font-family:monospace">AAA<br>BBB<br>CCC</span>
+  <span style="font-family:monospace;line-height:0">AAA<br>BBB<br>CCC</span>
   </summary>
   
 ---
@@ -168,7 +168,7 @@ char **ptr;
 <br>
 <details style="color:brown">
   <summary style="color:black">
-  <b>(d) [6 Marks]</b> Write a command-line-arguments based program. The program will be called with two file names as it's command line arguments. The program should read the characters from the first file, delete any character which is an odd number (1, 3, 5, 7, 9), and then write it to the second file. You <b>must use pointer notation</b> to implement this program.
+  <b>(d) [6 Marks]</b> Write a command-line-arguments based program. The program will be called with two file names as its command line arguments. The program should read the characters from the first file, delete any character which is an odd number (1, 3, 5, 7, 9), and then write it to the second file. You <b>must use pointer notation</b> to implement this program.
   </summary>
   
 ---
@@ -259,7 +259,7 @@ ptr_charNode charList(char *str) {
     &nbsp;&nbsp;return 0;<br>
     }<br><br>
   </span>
-  In the box below, complete this program. Assume that the ages in the array <span style="font-family:monospace">age</span> are between 0 - 15. Pack all the ages into the memory space allocated to <b style="font-family:monospace">ageInt</b>. You need to minimise the memory space required for packing, that is, you need to minimise the value of <b style="font-family:monospace">m</b>. The ages need to be packed in order from high-order bits to low-order bits in the memory space. Assume that you are working on a 32-bit machine where the <b style="font-family:monospace">sizeof(int)</b> is <b>4 bytes</b>.
+  In the box below, complete this program. Assume that the ages in the array <span style="font-family:monospace">age</span> are between 0 ~ 15. Pack all the ages into the memory space allocated to <b style="font-family:monospace">ageInt</b>. You need to minimise the memory space required for packing, that is, you need to minimise the value of <b style="font-family:monospace">m</b>. The ages need to be packed in order from high-order bits to low-order bits in the memory space. Assume that you are working on a 32-bit machine where the <b style="font-family:monospace">sizeof(int)</b> is <b>4 bytes</b>.
   </summary>
   
 ---
@@ -417,7 +417,7 @@ What would the output be from the following python commands?<br>
   </summary>
   
 ---
-"elif" is short for "else if". It is used at the end of an if statement to provide other conditional blocks which be executed if (and only if) previous conditions are not true. Zero or more `elif` parts can be used, optionally followed by an `else`.
+"elif" is short for "else if". It is used at the end of an if statement to provide other conditional blocks which be evaluated if (and only if) previous conditions are not true. Zero or more `elif` parts can be used, optionally followed by an `else`.
 ```python
 x = int(input("Enter a number: "))
 if x < 0:
@@ -437,7 +437,7 @@ else:
   </summary>
   
 ---
-Binds the return value of the method of the object to the specified target(s) of `as` (if any). It also calls the `__exit__` method on the object at the termination of the loop, and passes in the conditions for termination (I.E. an exception that was raised).
+Binds the return value of the method to the specified target(s) of `as` (if any). It also calls the `__exit__` method on the object at the termination of the block, and passes in the conditions for termination (I.E. an exception that was raised). This allows for things like auto-closing files.
 ```python
 with open('file.txt', 'r') as file:
   print(file.read()) #prints out the contents of file.txt
@@ -490,7 +490,7 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
   import urllib.request<br><br>
   months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']<br><br>
   urlbase = "http://wfs.geonet.org.nz/geonet/ows?output=csv&"<br>
-</span><br>
+</span>
 
 ---
 <details style="color:brown">
@@ -505,7 +505,7 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
 <span style="font-family:monospace">
   earthquakes = {}<br>
   for month in months:
-</span><br><br>
+</span><br>
 
 ---
 <details style="color:brown">
@@ -519,7 +519,7 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
 </details>
 <span style="font-family:monospace">
   &nbsp;&nbsp;&nbsp;&nbsp;start_date = datetime.datetime.strptime('%s-%s' % (thisyear, month), '%Y-%B')<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;end_date = start_date + datetime.datetime.timedelta(days=30)
+  &nbsp;&nbsp;&nbsp;&nbsp;end_date = start_date + datetime.timedelta(days=30)
 </span>
 <br>
 
@@ -550,14 +550,14 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mybytes = fp.read()<br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fp.close()<br>
   &nbsp;&nbsp;&nbsp;&nbsp;except:<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break
 </span>
 <br>
 
 ---
 <span style="font-family:monospace">
   end_date = start_date + datetime.timedelta(days=30)
-</span><br><br>
+</span><br>
 
 ---
 <details style="color:brown">
@@ -571,7 +571,7 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
 ---
 <span style="font-family:monospace">
   &nbsp;&nbsp;&nbsp;&nbsp;events = []
-</span><br><br>
+</span><br>
 
 ---
 <details style="color:brown">
@@ -588,7 +588,7 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
 ---
 <span style="font-family:monospace">
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try:
-</span><br><br>
+</span><br>
 
 ---
 <details style="color:brown">
@@ -607,7 +607,7 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
 <span style="font-family:monospace">
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;except:<br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pass
-</span><br><br>
+</span><br>
 
 ---
 <details style="color:brown">
