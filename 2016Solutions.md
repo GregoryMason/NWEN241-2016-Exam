@@ -2,7 +2,9 @@
 Disclaimer: These answers have been put together due to the lack of provided solutions. Alvin has looked over them and provided feedback about the answers, however there is still a chance they may not be entirely correct.<br><br>
 <b>How this document works:</b><br>
 By default the solutions are hidden, in order to best help those actively using them during study. In order to view the answer to any question, click on it and the answer will drop down.<br>
-If you think any answers could be improved in some way, then please go ahead and open a pull request with the amendment/alteration. Or if you don't know how/don't want to, then feel free to ask myself (or others you know) to help make sure you have an opportunity to contribute.<br><br>
+If you think any answers could be improved in some way, then please go ahead and open a pull request with the amendment/alteration. Or if you don't know how/don't want to, then feel free to ask myself (or others you know) to help make sure you have an opportunity to contribute.<br>
+You can view all the code in the questions (with additions that allow you to run/test it) in the [code folder](/code) in this repo.
+<br><br>
 Any questions about the content or answers in this exam are (probably) best asked in either the [Facebook group](https://www.facebook.com/groups/210019682911907/) or the [Discord server](https://discord.gg/GPtvtK4) (in the relevant channel).
 
 ## Question 1. C General Questions [20 Marks]
@@ -161,6 +163,7 @@ void printStr(char **ptr, int n) {
 int n = sizeof(a)/sizeof(a[0]);
 char **ptr;
 ```
+[Try the full code](/code/Question%202c.c)
 
 ---
 
@@ -196,6 +199,7 @@ int main(int argc, char *argv[]) {
     return 0;
 }
 ```
+[Try the full code](/code/Question%202d.c)
 
 ---
 
@@ -241,6 +245,7 @@ ptr_charNode charList(char *str) {
 	return head;
 }
 ```
+[Try the full code](/code/Question%203a.c)
 
 ---
 
@@ -279,6 +284,7 @@ int main(void) {
 	return 0;
 }
 ```
+[Try the full code](/code/Question%203b.c)
 
 ---
 </details><br>
@@ -476,6 +482,7 @@ def main():
 
 main()
 ```
+[Try the full code](/code/Question%205a.py)
 
 ---
 
