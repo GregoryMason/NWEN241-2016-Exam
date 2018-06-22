@@ -302,7 +302,7 @@ Legal
 ---
 
 </details>
-<details">
+<details>
   <summary>
   <span style="font-family:monospace">ii) pass</span>
   </summary>
@@ -474,8 +474,7 @@ def main():
 	if (len(sys.argv[1]) <= len(sys.argv[2])):
 		print(sys.argv[2])
 
-if __name__ == "__main__":
-	main()
+main()
 ```
 
 ---
