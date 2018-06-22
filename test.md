@@ -5,6 +5,11 @@
   </summary>
   
 ---
+1. **Pre-processing** <br> Removes comments, joins continued lines (lines ending in `\`) and interprets pre-processor commands (lines starting with `#`).
+2. **Compilation** <br> Translates pre-processed code into assembly instructions.
+3. **Assembly** <br> Translates assembly instructions into machine code/object code.
+4. **Linking** <br> Arranges the object code, and adds missing code, to produce an executable program.
+
 ---
 
 </details>
@@ -15,6 +20,10 @@
   </summary>
   
 ---
+* **Stack** <br>Used at run time to track the program as it's running. Each time a function is called a 'stack frame' gets added to the stack which contains all the automatic/temporary variables and other information relating to that instance of the function being called. Stack frames must at minimum contain a return address denoting where the program should return to once the frame is fulfilled.
+* **Heap** <br>Used for dynamic memory allocation in run-time. Memory in the Heap is managed through the use of <span style="font-family:monospace">malloc</span>, <span style="font-family:monospace">realloc</span>, <span style="font-family:monospace">calloc</span>, and <span style="font-family:monospace">free</span>.
+* **Data Segment** <br>Stores the values for all global variables and static variables. Split into 2 segments: "initialized" for variables that are declared with specific starting values, and "uninitialized" for variables that don't have specified starting values.
+
 ---
 
 </details>
@@ -25,6 +34,9 @@
   </summary>
   
 ---
+C Structures are only a collection of different data types, whilst Java Class objects can also have associated methods, can have various restrictions for variable and method access (eg "private", "protected"), and can utilise inheritance.<br>
+Java also creates class objects as references, whilst C creates Structures as values. (You would use pointers to structs in C to create the same effect of references.)
+
 ---
 
 </details>
@@ -35,6 +47,10 @@
   </summary>
   
 ---
+Java manipulates objects by reference, where all object variables are references. However for method arguments they're passed by value, or more specifically it passes the value of the reference, not the reference itself or the object/value it's pointing to. This means it creates a new, independent, reference to the same object/values as what's passed in.<br><br>
+C is strictly pass-by-value. If you with to pass a reference into a function then you would pass a pointer, and dereference that pointer to get the value it's pointing to.<br>
+*Note: That pointer is still passed into to the function by value (the location it's pointing at).*
+
 ---
 
 </details>
