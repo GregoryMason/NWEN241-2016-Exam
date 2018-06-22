@@ -64,6 +64,10 @@ C is strictly pass-by-value. If you with to pass a reference into a function the
   </summary>
   
 ---
+```c
+scanf("%[^\n]", str); //reads it into str
+```
+
 ---
 
 </details>
@@ -75,6 +79,10 @@ C is strictly pass-by-value. If you with to pass a reference into a function the
   </summary>
   
 ---
+```c
+char *p;
+```
+
 ---
 
 </details>
@@ -84,6 +92,10 @@ C is strictly pass-by-value. If you with to pass a reference into a function the
   </summary>
   
 ---
+```c
+char *p[n];
+```
+
 ---
 
 </details>
@@ -93,6 +105,10 @@ C is strictly pass-by-value. If you with to pass a reference into a function the
   </summary>
   
 ---
+```c
+int *p();
+```
+
 ---
 
 </details>
@@ -102,6 +118,10 @@ C is strictly pass-by-value. If you with to pass a reference into a function the
   </summary>
   
 ---
+```c
+char **p(int* a, int** b);
+```
+
 ---
 
 </details>
@@ -123,6 +143,18 @@ C is strictly pass-by-value. If you with to pass a reference into a function the
   </summary>
   
 ---
+```c
+void printStr(char **ptr, int n) {
+  for (int i = 0; i < n; ++i) {
+    printf("%s\n", *ptr);
+    ptr++;
+  }
+}
+
+int n = sizeof(a)/sizeof(a[0]);
+char **ptr;
+```
+
 ---
 
 </details>
@@ -133,6 +165,31 @@ C is strictly pass-by-value. If you with to pass a reference into a function the
   </summary>
   
 ---
+```c
+#include <stdio.h>
+
+int main(int argc, char *argv[]) {
+	if (argc != 3) return 1;
+
+	FILE *f1 = fopen(*(argv+1), "r");
+	if (f1 == NULL) return 1;
+
+	FILE *f2 = fopen(*(argv+2), "w");
+	if (f2 == NULL) return 1;
+
+	while (1) {
+		char c = getc(f1);
+		if (feof(f1)) break;
+		if (c<'9'+1 && c>'0' && (c-'0')%2 == 1) continue;
+		putc(c, f2);
+	}
+
+	fclose(f1);
+	fclose(f2);
+    return 0;
+}
+```
+
 ---
 
 </details>
