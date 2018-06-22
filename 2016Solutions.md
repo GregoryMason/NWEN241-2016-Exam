@@ -6,8 +6,8 @@ If you think any answers could be improved in some way, then please go ahead and
 Any questions about the content or answers in this exam are (probably) best asked in either the [Facebook group](https://www.facebook.com/groups/210019682911907/) or the [Discord server](https://discord.gg/GPtvtK4) (in the relevant channel).
 
 ## Question 1. C General Questions [20 Marks]
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
   <b>(a) [4 Marks]</b> Explain the four steps of compilation for C programs.
   </summary>
   
@@ -21,8 +21,8 @@ Any questions about the content or answers in this exam are (probably) best aske
 
 </details>
 <br>
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
   <b>(b) [6 Marks]</b> Explain how the Stack, Heap and Data Segment sections are used in program memory and how these sections relate to compile-time or run-time memory allocation.
   </summary>
   
@@ -35,8 +35,8 @@ Any questions about the content or answers in this exam are (probably) best aske
 
 </details>
 <br>
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
   <b>(c) [6 Marks]</b> Explain the difference between Java Class objects and C Structure variables.
   </summary>
   
@@ -48,8 +48,8 @@ Java also creates class objects as references, whilst C creates Structures as va
 
 </details>
 <br>
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
   <b>(d) [4 Marks]</b> Discuss pass-by-value and pass-by-reference in C and Java.
   </summary>
   
@@ -65,8 +65,8 @@ C is strictly pass-by-value. If you with to pass a reference into a function the
 
 ---
 ## Question 2. Arrays, Pointers and File Handling [20 Marks]
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
   <b>(a) [2 Marks]</b> Write a <span style="font-family:monospace">scanf</span> statement that takes all characters except the new-line character.
   </summary>
   
@@ -80,8 +80,8 @@ scanf("%[^\n]", str); //reads it into str
 </details>
 <br>
 <b>(b) [4 Marks]</b> Give a declaration for the variable <span style="font-family:monospace">p</span> in each of the following cases.
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
   <span style="font-family:monospace">p</span> is a pointer to an element of a string.
   </summary>
   
@@ -93,8 +93,8 @@ char *p;
 ---
 
 </details>
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
   <span style="font-family:monospace">p</span> is an array of <span style="font-family:monospace">n</span> pointers to <span style="font-family:monospace">char</span>.
   </summary>
   
@@ -106,8 +106,8 @@ char *p[n];
 ---
 
 </details>
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
   <span style="font-family:monospace">p</span> is a function that takes no arguments and returns a pointer to <span style="font-family:monospace">int</span>.
   </summary>
   
@@ -119,8 +119,8 @@ int *p();
 ---
 
 </details>
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
   <span style="font-family:monospace">p</span> is a pointer to a function that takes two arguments: a pointer to <span style="font-family:monospace">int</span> and a pointer to a pointer to <span style="font-family:monospace">int</span> and returns a pointer to an array of <span style="font-family:monospace">n</span> pointers to <span style="font-family:monospace">char</span>.
   </summary>
   
@@ -133,8 +133,8 @@ char **p(int *a, int **b);
 
 </details>
 <br>
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
   <b>(c) [8 Marks]</b> Consider the following code:<br>
   <span style="font-family:monospace">
     char *a[] = {"AAA", "BBB", "CCC"};<br>
@@ -166,8 +166,8 @@ char **ptr;
 
 </details>
 <br>
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
   <b>(d) [6 Marks]</b> Write a command-line-arguments based program. The program will be called with two file names as its command line arguments. The program should read the characters from the first file, delete any character which is an odd number (1, 3, 5, 7, 9), and then write it to the second file. You <b>must use pointer notation</b> to implement this program.
   </summary>
   
@@ -204,8 +204,8 @@ int main(int argc, char *argv[]) {
   
 ---
 ## Question 3. Bitwise Operators and Data Structures [20 Marks]
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
   <b>(a) [10 Marks]</b> In the following, we have defined a structure type named <span style="font-family:monospace">charNode</span>:<br>
   <span style="font-family:monospace;line-height:0">
     #define node_size sizeof(charNode)<br>
@@ -246,8 +246,8 @@ ptr_charNode charList(char *str) {
 
 </details>
 <br>
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
   <b>(b) [10 Marks]</b> See the program below.<br>
   <span style="font-family:monospace;line-height:0">
     int main(void)<br>
@@ -282,15 +282,17 @@ int main(void) {
 
 ---
 </details><br>
-<span style="color:blue"><b>Note:</b> "we didn't talk about packing so I can't give you this kind of question" - Alvin</span>
-<br><br>
+
+> **Note:** "we didn't talk about packing so I can't give you this kind of question" - Alvin
+>   
+<br>
   
 ---
 ## Question 4. Python Fundamentals  [20 Marks]
 <div></div>
 <b>a) [5 Marks]</b> Some of the following strings are legal Python identifiers and some are not. For each one state if the name is legal and if not, explain why:
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
   <span style="font-family:monospace">i) total_time</span>
   </summary>
   
@@ -300,8 +302,8 @@ Legal
 ---
 
 </details>
-<details style="color:brown">
-  <summary style="color:black">
+<details">
+  <summary>
   <span style="font-family:monospace">ii) pass</span>
   </summary>
   
@@ -311,8 +313,8 @@ Not legal; `pass` is a reserved keyword
 ---
 
 </details>
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
   <span style="font-family:monospace">iii) 2nd_day</span>
   </summary>
   
@@ -322,8 +324,8 @@ Not legal; identifiers cannot start with a number
 ---
 
 </details>
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
   <span style="font-family:monospace">iv) numberOfVisits</span>
   </summary>
   
@@ -333,8 +335,8 @@ Legal
 ---
 
 </details>
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
   <span style="font-family:monospace">v) user-count</span>
   </summary>
   
@@ -354,8 +356,8 @@ Not legal; identifiers cannot contain `-` as it is an operator
   secondList = firstList[2:]<br>
 </span><br>
 What would the output be from the following python commands?<br>
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
   <span style="font-family:monospace">i) print(firstList)</span>
   </summary>
   
@@ -365,8 +367,8 @@ What would the output be from the following python commands?<br>
 ---
 
 </details>
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
   <span style="font-family:monospace">ii) print(len(secondList))</span>
   </summary>
   
@@ -376,8 +378,8 @@ What would the output be from the following python commands?<br>
 ---
 
 </details>
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
   <span style="font-family:monospace">iii) print(firstList == secondList)</span>
   </summary>
   
@@ -387,8 +389,8 @@ What would the output be from the following python commands?<br>
 ---
 
 </details>
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
   <span style="font-family:monospace">iv) print(firstList[-1])</span>
   </summary>
   
@@ -398,8 +400,8 @@ What would the output be from the following python commands?<br>
 ---
 
 </details>
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
   <span style="font-family:monospace">v) print(firstList + secondList)</span>
   </summary>
   
@@ -411,8 +413,8 @@ What would the output be from the following python commands?<br>
 </details>
 <br>
 <b>c) [10 Marks]</b> For each of the following Python keywords, briefly explain what it does and write a short piece of code to illustrate its use.
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
   <span style="font-family:monospace">i) elif</span>
   </summary>
   
@@ -431,8 +433,8 @@ else:
 ---
 
 </details>
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
   <span style="font-family:monospace">ii) with</span>
   </summary>
   
@@ -450,8 +452,8 @@ with open('file.txt', 'r') as file:
   
 ---
 ## Question 5. Writing and Reading Python Programs [20 Marks]
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
   <b>a) [10 Marks]</b> Write a python program that reads two strings as parameters on the command line and prints out the longer of the two. If they are the same length, print both. For example, it might be called by:<br>
   <span style="font-family:monospace;line-height:4">
     $python3 longeststring.py first second<br>
@@ -493,8 +495,8 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
 </span>
 
 ---
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
     <span style="font-family:monospace"># (1)</span>
   </summary>
   <span style="font-family:monospace">&nbsp;&nbsp;# Get the current year</span>
@@ -508,8 +510,8 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
 </span><br>
 
 ---
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
     <span style="font-family:monospace">&nbsp;&nbsp;# (2)</span>
   </summary>
   <span style="font-family:monospace">
@@ -525,8 +527,8 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
 
 ---
 ---
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
     <span style="font-family:monospace">&nbsp;&nbsp;# (3)</span>
   </summary>
   <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;# Construct URL from base and start/end dates for month</span>
@@ -538,8 +540,8 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
 
 ---
 ---
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
     <span style="font-family:monospace">&nbsp;&nbsp;# (4)</span>
   </summary>
   <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;# Get the CSV file from the constructed URL and read it in</span>
@@ -560,8 +562,8 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
 </span><br>
 
 ---
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
     <span style="font-family:monospace">&nbsp;&nbsp;# (5)</span>
   </summary>
   <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;# Decode UTF-8 bytes from CSV file and convert to a string</span>
@@ -574,8 +576,8 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
 </span><br>
 
 ---
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
     <span style="font-family:monospace">&nbsp;&nbsp;# (6)</span>
   </summary>
   <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;# Split the CSV into lines</span>
@@ -591,8 +593,8 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
 </span><br>
 
 ---
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
     <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# (7)</span>
   </summary>
   <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Split each line by "," and add the magnitude to events</span>
@@ -610,8 +612,8 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
 </span><br>
 
 ---
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
     <span style="font-family:monospace">&nbsp;&nbsp;# (8)</span>
   </summary>
   <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;# Sort list of events, decending</span>
@@ -622,8 +624,8 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
 
 ---
 ---
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
     <span style="font-family:monospace">&nbsp;&nbsp;# (9)</span>
   </summary>
   <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;# Collate results and add them to earthquakes</span>
@@ -638,8 +640,8 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
 
 ---
 ---
-<details style="color:brown">
-  <summary style="color:black">
+<details>
+  <summary>
     <span style="font-family:monospace"># (10)</span>
   </summary>
   <span style="font-family:monospace">&nbsp;&nbsp;# Print each month with the results collected for it</span>
