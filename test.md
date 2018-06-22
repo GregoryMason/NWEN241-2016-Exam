@@ -290,4 +290,188 @@ What would the output be from the following python commands?<br>
 ---
 
 </details>
+<br><br>
+  
+---
+## Question 5. Writing and Reading Python Programs [20 Marks]
+<details style="color:brown">
+  <summary style="color:black">
+  <b>a) [10 Marks]</b> Write a python program that reads two strings as parameters on the command line and prints out the longer of the two. If they are the same length, print both. For example, it might be called by:<br>
+  <span style="font-family:monospace;line-height:4">
+    $python3 longeststring.py first second<br>
+  </span>
+  Your program should check the parameters and issue appropriate error messages and return values.
+  </summary>
+  
+---
+---
+
+</details>
 <br>
+<b>b) [10 Marks]</b> Consider the following python program which retrieves earthquake data from the geonet website for various periods of time. You are to add 10 suitable comments (one comment for each of the marking boxes) to the following code explaining the functionality.<br><br>
+<b style="line-height:2.5">Additional information</b><br>
+Data returned from the <span style="font-family:monospace">fp.read()</span> statement in the code is a sequence of bytes that are encoded in the UTF-8 character set. The returned data is a well-formed series of Comma Separated Values (CSV). Each line in the CSV refers to a detected earthquake. The 9<sup>th</sup> value of each line is the magnitude of the earthquake.<br><br>
+<span style="font-family:monospace;line-height:0">
+  #!/usr/bin/env python3<br><br>
+  import sys, os<br>
+  import datetime<br>
+  import urllib.request<br><br>
+  months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']<br><br>
+  urlbase = "http://wfs.geonet.org.nz/geonet/ows?output=csv&"<br>
+</span><br>
+
+---
+<details style="color:brown">
+  <summary style="color:black">
+    <span style="font-family:monospace"># (1)</span>
+  </summary>
+  <span style="font-family:monospace">&nbsp;&nbsp;# </span>
+</details>
+<span style="font-family:monospace">&nbsp;&nbsp;thisyear = datetime.datetime.now().year</span>
+
+---
+<span style="font-family:monospace">
+  earthquakes = {}<br>
+  for month in months:
+</span><br><br>
+
+---
+<details style="color:brown">
+  <summary style="color:black">
+    <span style="font-family:monospace">&nbsp;&nbsp;# (2)</span>
+  </summary>
+  <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;# </span>
+</details>
+<span style="font-family:monospace">
+  &nbsp;&nbsp;&nbsp;&nbsp;start_date = datetime.datetime.strptime('%s-%s' % (thisyear, month), '%Y-%B')<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;end_date = start_date + datetime.datetime.timedelta(days=30)
+</span>
+<br>
+
+---
+---
+<details style="color:brown">
+  <summary style="color:black">
+    <span style="font-family:monospace">&nbsp;&nbsp;# (3)</span>
+  </summary>
+  <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;# </span>
+</details>
+<span style="font-family:monospace">
+  &nbsp;&nbsp;&nbsp;&nbsp;url = urlbase + 'from=' + start_date.strftime("'%Y-%m-%d'") + '&to=' + end_date.strftime("'%Y-%m-%d'")
+</span>
+<br>
+
+---
+---
+<details style="color:brown">
+  <summary style="color:black">
+    <span style="font-family:monospace">&nbsp;&nbsp;# (4)</span>
+  </summary>
+  <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;# </span>
+</details>
+<span style="font-family:monospace">
+  &nbsp;&nbsp;&nbsp;&nbsp;try:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fp = urllib.request.urlopen(url)<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mybytes = fp.read()<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fp.close()<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;except:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break<br>
+</span>
+<br>
+
+---
+<span style="font-family:monospace">
+  end_date = start_date + datetime.timedelta(days=30)
+</span><br><br>
+
+---
+<details style="color:brown">
+  <summary style="color:black">
+    <span style="font-family:monospace">&nbsp;&nbsp;# (5)</span>
+  </summary>
+  <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;# </span>
+</details>
+<span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;mycsv = str(mybytes.decode('utf-8'))</span>
+
+---
+<span style="font-family:monospace">
+  &nbsp;&nbsp;&nbsp;&nbsp;events = []
+</span><br><br>
+
+---
+<details style="color:brown">
+  <summary style="color:black">
+    <span style="font-family:monospace">&nbsp;&nbsp;# (6)</span>
+  </summary>
+  <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;# </span>
+</details>
+<span style="font-family:monospace">
+  &nbsp;&nbsp;&nbsp;&nbsp;lines = mycsv.split('\n')<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;for line in lines:
+</span>
+
+---
+<span style="font-family:monospace">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try:
+</span><br><br>
+
+---
+<details style="color:brown">
+  <summary style="color:black">
+    <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# (7)</span>
+  </summary>
+  <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# </span>
+</details>
+<span style="font-family:monospace">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;values = line.split(',')<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;magnitude = float(values[8])<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;events.append(magnitude)
+</span>
+
+---
+<span style="font-family:monospace">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;except:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pass
+</span><br><br>
+
+---
+<details style="color:brown">
+  <summary style="color:black">
+    <span style="font-family:monospace">&nbsp;&nbsp;# (8)</span>
+  </summary>
+  <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;# </span>
+</details>
+<span style="font-family:monospace">
+  &nbsp;&nbsp;&nbsp;&nbsp;sorted_events = sorted(events, reverse=True)
+</span>
+
+---
+---
+<details style="color:brown">
+  <summary style="color:black">
+    <span style="font-family:monospace">&nbsp;&nbsp;# (9)</span>
+  </summary>
+  <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;# </span>
+</details>
+<span style="font-family:monospace">
+  &nbsp;&nbsp;&nbsp;&nbsp;try:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;results = {month: {'max' : sorted_events[0], 'avg' : sum(sorted_events)/len(sorted_events)}}<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;earthquakes.update(results)<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;except:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break
+</span>
+
+---
+---
+<details style="color:brown">
+  <summary style="color:black">
+    <span style="font-family:monospace"># (10)</span>
+  </summary>
+  <span style="font-family:monospace">&nbsp;&nbsp;# </span>
+</details>
+<span style="font-family:monospace">
+  &nbsp;&nbsp;for month, results in earthquakes.items():<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;print(month + " " + repr(results))
+</span>
+
+---
