@@ -289,6 +289,8 @@ question" - Alvin
   </summary>
   
 ---
+Legal
+
 ---
 
 </details>
@@ -298,6 +300,8 @@ question" - Alvin
   </summary>
   
 ---
+Not legal; `pass` is a reserved keyword
+
 ---
 
 </details>
@@ -307,6 +311,8 @@ question" - Alvin
   </summary>
   
 ---
+Not legal; identifiers cannot start with a number
+
 ---
 
 </details>
@@ -316,6 +322,8 @@ question" - Alvin
   </summary>
   
 ---
+Legal
+
 ---
 
 </details>
@@ -325,6 +333,8 @@ question" - Alvin
   </summary>
   
 ---
+Not legal; identifiers cannot contain `-` as it is an operator
+
 ---
 
 </details>
@@ -344,6 +354,8 @@ What would the output be from the following python commands?<br>
   </summary>
   
 ---
+<span style="font-family:monospace">[2, 5, 15, 22, 20]</span>
+
 ---
 
 </details>
@@ -353,6 +365,8 @@ What would the output be from the following python commands?<br>
   </summary>
   
 ---
+<span style="font-family:monospace">3</span>
+
 ---
 
 </details>
@@ -362,6 +376,8 @@ What would the output be from the following python commands?<br>
   </summary>
   
 ---
+<span style="font-family:monospace">False</span>
+
 ---
 
 </details>
@@ -371,6 +387,8 @@ What would the output be from the following python commands?<br>
   </summary>
   
 ---
+<span style="font-family:monospace">20</span>
+
 ---
 
 </details>
@@ -380,6 +398,8 @@ What would the output be from the following python commands?<br>
   </summary>
   
 ---
+<span style="font-family:monospace">[2, 5, 15, 22, 20, 15, 22, 20]</span>
+
 ---
 
 </details>
@@ -391,6 +411,17 @@ What would the output be from the following python commands?<br>
   </summary>
   
 ---
+"elif" is short for "else if". It is used at the end of an if statement to provide other conditional blocks which be executed if (and only if) previous conditions are not true. Zero or more `elif` parts can be used, optionally followed by an `else`.
+```python
+x = int(input("Enter a number: "))
+if x < 0:
+  print("x is less than 0")
+elif x == 0:
+  print("x is 0")
+else:
+  print("x is greater than 0")
+```
+
 ---
 
 </details>
@@ -400,6 +431,12 @@ What would the output be from the following python commands?<br>
   </summary>
   
 ---
+Binds the return value of the method of the object to the specified target(s) of `as` (if any). It also calls the `__exit__` method on the object at the termination of the loop, and passes in the conditions for termination (I.E. an exception that was raised).
+```python
+with open('file.txt', 'r') as file:
+  print(file.read()) #prints out the contents of file.txt
+```
+
 ---
 
 </details>
