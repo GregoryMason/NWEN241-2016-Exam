@@ -454,6 +454,22 @@ with open('file.txt', 'r') as file:
   </summary>
   
 ---
+```python
+import sys
+
+def main():
+	if (len(sys.argv) != 3):
+		print("Incorrect number of arguments")
+		return
+	if (len(sys.argv[1]) >= len(sys.argv[2])):
+		print(sys.argv[1])
+	if (len(sys.argv[1]) <= len(sys.argv[2])):
+		print(sys.argv[2])
+
+if __name__ == "__main__":
+	main()
+```
+
 ---
 
 </details>
@@ -475,7 +491,7 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
   <summary style="color:black">
     <span style="font-family:monospace"># (1)</span>
   </summary>
-  <span style="font-family:monospace">&nbsp;&nbsp;# </span>
+  <span style="font-family:monospace">&nbsp;&nbsp;# Get the current year</span>
 </details>
 <span style="font-family:monospace">&nbsp;&nbsp;thisyear = datetime.datetime.now().year</span>
 
@@ -490,7 +506,10 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
   <summary style="color:black">
     <span style="font-family:monospace">&nbsp;&nbsp;# (2)</span>
   </summary>
-  <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;# </span>
+  <span style="font-family:monospace">
+  &nbsp;&nbsp;&nbsp;&nbsp;# Set start date to first day of month<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;# Set end date to 30 days after start date
+  </span>
 </details>
 <span style="font-family:monospace">
   &nbsp;&nbsp;&nbsp;&nbsp;start_date = datetime.datetime.strptime('%s-%s' % (thisyear, month), '%Y-%B')<br>
@@ -504,7 +523,7 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
   <summary style="color:black">
     <span style="font-family:monospace">&nbsp;&nbsp;# (3)</span>
   </summary>
-  <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;# </span>
+  <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;# Construct URL from base and start/end dates for month</span>
 </details>
 <span style="font-family:monospace">
   &nbsp;&nbsp;&nbsp;&nbsp;url = urlbase + 'from=' + start_date.strftime("'%Y-%m-%d'") + '&to=' + end_date.strftime("'%Y-%m-%d'")
@@ -517,7 +536,7 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
   <summary style="color:black">
     <span style="font-family:monospace">&nbsp;&nbsp;# (4)</span>
   </summary>
-  <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;# </span>
+  <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;# Get the CSV file from the constructed URL and read it in</span>
 </details>
 <span style="font-family:monospace">
   &nbsp;&nbsp;&nbsp;&nbsp;try:<br>
@@ -539,7 +558,7 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
   <summary style="color:black">
     <span style="font-family:monospace">&nbsp;&nbsp;# (5)</span>
   </summary>
-  <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;# </span>
+  <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;# Decode UTF-8 bytes from CSV file and convert to a string</span>
 </details>
 <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;mycsv = str(mybytes.decode('utf-8'))</span>
 
@@ -553,7 +572,7 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
   <summary style="color:black">
     <span style="font-family:monospace">&nbsp;&nbsp;# (6)</span>
   </summary>
-  <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;# </span>
+  <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;# Split the CSV into lines</span>
 </details>
 <span style="font-family:monospace">
   &nbsp;&nbsp;&nbsp;&nbsp;lines = mycsv.split('\n')<br>
@@ -570,7 +589,7 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
   <summary style="color:black">
     <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# (7)</span>
   </summary>
-  <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# </span>
+  <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Split each line by "," and add the magnitude to events</span>
 </details>
 <span style="font-family:monospace">
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;values = line.split(',')<br>
@@ -589,7 +608,7 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
   <summary style="color:black">
     <span style="font-family:monospace">&nbsp;&nbsp;# (8)</span>
   </summary>
-  <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;# </span>
+  <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;# Sort list of events, decending</span>
 </details>
 <span style="font-family:monospace">
   &nbsp;&nbsp;&nbsp;&nbsp;sorted_events = sorted(events, reverse=True)
@@ -601,7 +620,7 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
   <summary style="color:black">
     <span style="font-family:monospace">&nbsp;&nbsp;# (9)</span>
   </summary>
-  <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;# </span>
+  <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;# Collate results and add them to earthquakes</span>
 </details>
 <span style="font-family:monospace">
   &nbsp;&nbsp;&nbsp;&nbsp;try:<br>
@@ -617,7 +636,7 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
   <summary style="color:black">
     <span style="font-family:monospace"># (10)</span>
   </summary>
-  <span style="font-family:monospace">&nbsp;&nbsp;# </span>
+  <span style="font-family:monospace">&nbsp;&nbsp;# Print each month with the results collected for it</span>
 </details>
 <span style="font-family:monospace">
   &nbsp;&nbsp;for month, results in earthquakes.items():<br>
