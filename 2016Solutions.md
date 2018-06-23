@@ -14,7 +14,7 @@ Any questions about the content or answers in this exam are (probably) best aske
   <summary>
     <b>(a) [4 Marks]</b> Explain the four steps of compilation for C programs.
   </summary>
-  <div style="border:solid;padding:5px;margin:5px">
+  <div style="border:solid 3px;padding:5px;margin:5px">
   
   1. **Pre-processing** <br/> Removes comments, joins continued lines (lines ending in `\`) and interprets pre-processor commands (lines starting with `#`).
   2. **Compilation** <br/> Translates pre-processed code into assembly instructions.
@@ -27,7 +27,7 @@ Any questions about the content or answers in this exam are (probably) best aske
   <summary>
     <b>(b) [6 Marks]</b> Explain how the Stack, Heap and Data Segment sections are used in program memory and how these sections relate to compile-time or run-time memory allocation.
   </summary>
-  <div style="border:solid;padding:5px;margin:5px">
+  <div style="border:solid 3px;padding:5px;margin:5px">
   
   * **Stack** <br/>Used at run-time to track the program as it's running. Each time a function is called a 'stack frame' gets added to the stack which contains all the automatic/temporary variables and other information relating to that instance of the function being called. Stack frames must at minimum contain a return address denoting where the program should return to once the frame is fulfilled.
   * **Heap** <br/>Used for dynamic memory allocation in run-time. Memory in the Heap is managed through the use of <span style="font-family:monospace">malloc</span>, <span style="font-family:monospace">realloc</span>, <span style="font-family:monospace">calloc</span>, and <span style="font-family:monospace">free</span>.
@@ -39,7 +39,7 @@ Any questions about the content or answers in this exam are (probably) best aske
   <summary>
     <b>(c) [6 Marks]</b> Explain the difference between Java Class objects and C Structure variables.
   </summary>
-  <div style="border:solid;padding:5px;margin:5px">
+  <div style="border:solid 3px;padding:5px;margin:5px">
   
   C Structures are a collection of different data types/values, whilst Java Class objects can also: have associated methods, have various restrictions for variable and method access (eg "private", "protected"), and utilise inheritance.\
   Java also creates class objects as references, whilst C creates Structures as values. (You would use pointers to structs in C to create the same effect of references.)
@@ -50,7 +50,7 @@ Any questions about the content or answers in this exam are (probably) best aske
   <summary>
     <b>(d) [4 Marks]</b> Discuss pass-by-value and pass-by-reference in C and Java.
   </summary>
-  <div style="border:solid;padding:5px;margin:5px;">
+  <div style="border:solid 3px;padding:5px;margin:5px;">
   
   Java manipulates objects by reference, where all object variables are references. However for method arguments, they're passed by value, or more specifically it passes the value of the reference, not the reference itself, or the object/value it's pointing to. This means it creates a new, independent, reference to the same object/values as what's passed in.
   
@@ -66,7 +66,7 @@ Any questions about the content or answers in this exam are (probably) best aske
   <summary>
     <b>(a) [2 Marks]</b> Write a <span style="font-family:monospace">scanf</span> statement that takes all characters except the new-line character.
   </summary>
-  <div style="border:solid;padding:5px;margin:5px;line-height:0;">
+  <div style="border:solid 3px;padding:5px;margin:5px;line-height:0;">
   
   ```c
   scanf("%[^\n]", str); //reads it into str
@@ -79,7 +79,7 @@ Any questions about the content or answers in this exam are (probably) best aske
   <summary>
     <span style="font-family:monospace">p</span> is a pointer to an element of a string.
   </summary>
-  <div style="border:solid;padding:5px;margin:5px;line-height:0;">
+  <div style="border:solid 3px;padding:5px;margin:5px;line-height:0;">
   
   ```c
   char *p;
@@ -90,7 +90,7 @@ Any questions about the content or answers in this exam are (probably) best aske
   <summary>
     <span style="font-family:monospace">p</span> is an array of <span style="font-family:monospace">n</span> pointers to <span style="font-family:monospace">char</span>.
   </summary>
-  <div style="border:solid;padding:5px;margin:5px;line-height:0;">
+  <div style="border:solid 3px;padding:5px;margin:5px;line-height:0;">
   
   ```c
   char *p[n];
@@ -101,7 +101,7 @@ Any questions about the content or answers in this exam are (probably) best aske
   <summary>
     <span style="font-family:monospace">p</span> is a function that takes no arguments and returns a pointer to <span style="font-family:monospace">int</span>.
   </summary>
-  <div style="border:solid;padding:5px;margin:5px;line-height:0;">
+  <div style="border:solid 3px;padding:5px;margin:5px;line-height:0;">
   
   ```c
   int *p();
@@ -112,7 +112,7 @@ Any questions about the content or answers in this exam are (probably) best aske
   <summary>
     <span style="font-family:monospace">p</span> is a pointer to a function that takes two arguments: a pointer to <span style="font-family:monospace">int</span> and a pointer to a pointer to <span style="font-family:monospace">int</span> and returns a pointer to an array of <span style="font-family:monospace">n</span> pointers to <span style="font-family:monospace">char</span>.
   </summary>
-  <div style="border:solid;padding:5px;margin:5px;line-height:0;">
+  <div style="border:solid 3px;padding:5px;margin:5px;line-height:0;">
   
   ```c
   char **p(int *a, int **b);
@@ -135,7 +135,7 @@ Any questions about the content or answers in this exam are (probably) best aske
     Define the <span style="font-family:monospace">int</span> variable <span style="font-family:monospace">n</span>, declare variable <span style="font-family:monospace">ptr</span>, and implement function <span style="font-family:monospace">printStr</span> so that <span style="font-family:monospace">printStr(ptr,n)</span> prints out the three strings in the following format:<br/>
     <span style="font-family:monospace;line-height:0">AAA<br/>BBB<br/>CCC</span>
   </summary>
-  <div style="border:solid;padding:5px;margin:5px;">
+  <div style="border:solid 3px;padding:5px;margin:5px;">
   
   ```c
   void printStr(char **ptr, int n) {
@@ -156,7 +156,7 @@ Any questions about the content or answers in this exam are (probably) best aske
   <summary>
     <b>(d) [6 Marks]</b> Write a command-line-arguments based program. The program will be called with two file names as its command line arguments. The program should read the characters from the first file, delete any character which is an odd number (1, 3, 5, 7, 9), and then write it to the second file. You <b>must use pointer notation</b> to implement this program.
   </summary>
-  <div style="border:solid;padding:5px;margin:5px;">
+  <div style="border:solid 3px;padding:5px;margin:5px;">
   
   ```c
   #include <stdio.h>
@@ -203,7 +203,7 @@ Any questions about the content or answers in this exam are (probably) best aske
     </span>
     Write a function with prototype <span style="font-family:monospace">ptr_charNode charList(char *)</span>, which creates a <span style="font-family:monospace">charNode</span> for each character in a string and links the nodes in sequence, and returns a pointer to the first node of the resulting list.
   </summary>
-  <div style="border:solid;padding:5px;margin:5px;">
+  <div style="border:solid 3px;padding:5px;margin:5px;">
   
   ```c
   ptr_charNode charList(char *str) {
@@ -245,7 +245,7 @@ Any questions about the content or answers in this exam are (probably) best aske
     </span>
     In the box below, complete this program. Assume that the ages in the array <span style="font-family:monospace">age</span> are between 0 ~ 15. Pack all the ages into the memory space allocated to <b style="font-family:monospace">ageInt</b>. You need to minimise the memory space required for packing, that is, you need to minimise the value of <b style="font-family:monospace">m</b>. The ages need to be packed in order from high-order bits to low-order bits in the memory space. Assume that you are working on a 32-bit machine where the <b style="font-family:monospace">sizeof(int)</b> is <b>4 bytes</b>.
   </summary>
-  <div style="border:solid;padding:5px;margin:5px;">
+  <div style="border:solid 3px;padding:5px;margin:5px;">
   
   ```c
   int main(void) {
@@ -279,7 +279,7 @@ Any questions about the content or answers in this exam are (probably) best aske
   <summary>
     <span style="font-family:monospace">i) total_time</span>
   </summary>
-  <div style="border:solid;padding:5px;margin:5px;">
+  <div style="border:solid 3px;padding:5px;margin:5px;">
     Legal
   </div>
 </details>
@@ -287,7 +287,7 @@ Any questions about the content or answers in this exam are (probably) best aske
   <summary>
     <span style="font-family:monospace">ii) pass</span>
   </summary>
-  <div style="border:solid;padding:5px;margin:5px;">
+  <div style="border:solid 3px;padding:5px;margin:5px;">
     Not legal; <span style="font-family:monospace">pass</span> is a reserved keyword
   </div>
 </details>
@@ -295,7 +295,7 @@ Any questions about the content or answers in this exam are (probably) best aske
   <summary>
     <span style="font-family:monospace">iii) 2nd_day</span>
   </summary>
-  <div style="border:solid;padding:5px;margin:5px;">
+  <div style="border:solid 3px;padding:5px;margin:5px;">
     Not legal; identifiers cannot start with a number
   </div>
 </details>
@@ -303,7 +303,7 @@ Any questions about the content or answers in this exam are (probably) best aske
   <summary>
     <span style="font-family:monospace">iv) numberOfVisits</span>
   </summary>
-  <div style="border:solid;padding:5px;margin:5px;">
+  <div style="border:solid 3px;padding:5px;margin:5px;">
     Legal
   </div>
 </details>
@@ -311,7 +311,7 @@ Any questions about the content or answers in this exam are (probably) best aske
   <summary>
     <span style="font-family:monospace">v) user-count</span>
   </summary>
-  <div style="border:solid;padding:5px;margin:5px;">
+  <div style="border:solid 3px;padding:5px;margin:5px;">
     Not legal; identifiers cannot contain <span style="font-family:monospace">-</span> as it is an operator
   </div>
 </details>
@@ -329,7 +329,7 @@ What would the output be from the following python commands?<br>
   <summary>
     <span style="font-family:monospace">i) print(firstList)</span>
   </summary>
-  <div style="border:solid;padding:5px;margin:5px;">
+  <div style="border:solid 3px;padding:5px;margin:5px;">
     <span style="font-family:monospace">[2, 5, 15, 22, 20]</span>
   </div>
 </details>
@@ -337,7 +337,7 @@ What would the output be from the following python commands?<br>
   <summary>
     <span style="font-family:monospace">ii) print(len(secondList))</span>
   </summary>
-  <div style="border:solid;padding:5px;margin:5px;">
+  <div style="border:solid 3px;padding:5px;margin:5px;">
     <span style="font-family:monospace">3</span>
   </div>
 </details>
@@ -345,7 +345,7 @@ What would the output be from the following python commands?<br>
   <summary>
     <span style="font-family:monospace">iii) print(firstList == secondList)</span>
   </summary>
-  <div style="border:solid;padding:5px;margin:5px;">
+  <div style="border:solid 3px;padding:5px;margin:5px;">
     <span style="font-family:monospace">False</span>
   </div>
 </details>
@@ -353,7 +353,7 @@ What would the output be from the following python commands?<br>
   <summary>
     <span style="font-family:monospace">iv) print(firstList[-1])</span>
   </summary>
-  <div style="border:solid;padding:5px;margin:5px;">
+  <div style="border:solid 3px;padding:5px;margin:5px;">
     <span style="font-family:monospace">20</span>
   </div>
 </details>
@@ -361,7 +361,7 @@ What would the output be from the following python commands?<br>
   <summary>
     <span style="font-family:monospace">v) print(firstList + secondList)</span>
   </summary>
-  <div style="border:solid;padding:5px;margin:5px;">
+  <div style="border:solid 3px;padding:5px;margin:5px;">
     <span style="font-family:monospace">[2, 5, 15, 22, 20, 15, 22, 20]</span>
   </div>
 </details>
@@ -371,7 +371,7 @@ What would the output be from the following python commands?<br>
   <summary>
     <span style="font-family:monospace">i) elif</span>
   </summary>
-  <div style="border:solid;padding:5px;margin:5px;">
+  <div style="border:solid 3px;padding:5px;margin:5px;">
   
   "elif" is short for "else if". It is used at the end of an if statement to provide other conditional blocks which be evaluated if (and only if) previous conditions are not true. Zero or more `elif` parts can be used, optionally followed by an `else`.
   ```python
@@ -389,7 +389,7 @@ What would the output be from the following python commands?<br>
   <summary>
     <span style="font-family:monospace">ii) with</span>
   </summary>
-  <div style="border:solid;padding:5px;margin:5px;">
+  <div style="border:solid 3px;padding:5px;margin:5px;">
   
   Binds the return value of the method to the specified target(s) of `as` (if any). It also calls the `__exit__` method on the object at the termination of the block, and passes in the conditions for termination (I.E. an exception that was raised). This allows for things like auto-closing files.
   ```python
@@ -410,7 +410,7 @@ What would the output be from the following python commands?<br>
     </span>
     Your program should check the parameters and issue appropriate error messages and return values.
   </summary>
-  <div style="border:solid;padding:5px;margin:5px;">
+  <div style="border:solid 3px;padding:5px;margin:5px;">
   
   ```python
   import sys
@@ -430,7 +430,7 @@ What would the output be from the following python commands?<br>
   </div>
 </details>
 <br/>
-<b>b) [10 Marks]</b> Consider the following python program which retrieves earthquake data from the geonet website for various periods of time. You are to add 10 suitable comments (one comment for each of the marking boxes) to the following code explaining the functionality.<br><br/>
+<b>b) [10 Marks]</b> Consider the following python program which retrieves earthquake data from the geonet website for various periods of time. You are to add 10 suitable comments (one comment for each of the marking boxes) to the following code explaining the functionality.<br/><br/>
 <b style="line-height:2.5">Additional information</b><br/>
 Data returned from the <span style="font-family:monospace">fp.read()</span> statement in the code is a sequence of bytes that are encoded in the UTF-8 character set. The returned data is a well-formed series of Comma Separated Values (CSV). Each line in the CSV refers to a detected earthquake. The 9<sup>th</sup> value of each line is the magnitude of the earthquake.<br/><br/>
 <span style="font-family:monospace;line-height:0">
@@ -441,7 +441,7 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
   months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']<br><br>
   urlbase = "http://wfs.geonet.org.nz/geonet/ows?output=csv&"<br>
 </span>
-<div style="border:solid;padding:5px;margin:5px;">
+<div style="border:solid 3px;padding:5px;margin:5px;">
   <details>
     <summary>
       <span style="font-family:monospace"># (1)</span>
@@ -454,7 +454,7 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
   &nbsp;&nbsp;&nbsp;&nbsp;earthquakes = {}<br>
   &nbsp;&nbsp;&nbsp;&nbsp;for month in months:
 </span><br/>
-<div style="border:solid;padding:5px;margin:5px;">
+<div style="border:solid 3px;padding:5px;margin:5px;">
   <details>
     <summary>
       <span style="font-family:monospace">&nbsp;&nbsp;# (2)</span>
@@ -470,7 +470,7 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
   </span>
   <br/>
 </div>
-<div style="border:solid;padding:5px;margin:5px;">
+<div style="border:solid 3px;padding:5px;margin:5px;">
   <details>
     <summary>
       <span style="font-family:monospace">&nbsp;&nbsp;# (3)</span>
@@ -482,7 +482,7 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
   </span>
   <br/>
 </div>
-<div style="border:solid;padding:5px;margin:5px;">
+<div style="border:solid 3px;padding:5px;margin:5px;">
   <details>
     <summary>
       <span style="font-family:monospace">&nbsp;&nbsp;# (4)</span>
@@ -502,7 +502,7 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
 <span style="font-family:monospace">
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end_date = start_date + datetime.timedelta(days=30)
 </span><br/>
-<div style="border:solid;padding:5px;margin:5px;">
+<div style="border:solid 3px;padding:5px;margin:5px;">
   <details>
     <summary>
       <span style="font-family:monospace">&nbsp;&nbsp;# (5)</span>
@@ -514,7 +514,7 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
 <span style="font-family:monospace">
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;events = []
 </span><br/>
-<div style="border:solid;padding:5px;margin:5px;">
+<div style="border:solid 3px;padding:5px;margin:5px;">
   <details>
     <summary>
       <span style="font-family:monospace">&nbsp;&nbsp;# (6)</span>
@@ -529,7 +529,7 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
 <span style="font-family:monospace">
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try:
 </span><br/>
-<div style="border:solid;padding:5px;margin:5px;">
+<div style="border:solid 3px;padding:5px;margin:5px;">
   <details>
     <summary>
       <span style="font-family:monospace">&nbsp;&nbsp;&nbsp;&nbsp;# (7)</span>
@@ -546,7 +546,7 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;except:<br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pass
 </span><br/>
-<div style="border:solid;padding:5px;margin:5px;">
+<div style="border:solid 3px;padding:5px;margin:5px;">
   <details>
     <summary>
       <span style="font-family:monospace">&nbsp;&nbsp;# (8)</span>
@@ -557,7 +557,7 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
     &nbsp;&nbsp;&nbsp;&nbsp;sorted_events = sorted(events, reverse=True)
   </span>
 </div>
-<div style="border:solid;padding:5px;margin:5px;">
+<div style="border:solid 3px;padding:5px;margin:5px;">
   <details>
     <summary>
       <span style="font-family:monospace">&nbsp;&nbsp;# (9)</span>
@@ -572,7 +572,7 @@ Data returned from the <span style="font-family:monospace">fp.read()</span> stat
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break
   </span>
 </div>
-<div style="border:solid;padding:5px;margin:5px;">
+<div style="border:solid 3px;padding:5px;margin:5px;">
   <details>
     <summary>
       <span style="font-family:monospace"># (10)</span>
