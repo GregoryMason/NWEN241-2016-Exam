@@ -2,7 +2,7 @@
 Disclaimer: These answers have been put together due to the lack of provided solutions. Alvin has looked over them and provided feedback about the answers, however there is still a chance they may not be entirely correct.
 
 \
-<b>How this document works:</b>\
+**How this document works:**\
 By default the solutions are hidden, in order to best help those actively using them during study. In order to view the answer to any question, click on it and the answer will drop down.\
 If you think any answers could be improved in some way, then please go ahead and open a pull request with the amendment/alteration. Or if you don't know how/don't want to, then feel free to ask myself (or others) to help make sure you have an opportunity to contribute.\
 You can view all the code in the questions (with additions that allow you to run/test it) in the [code folder](/code) in this repo.
