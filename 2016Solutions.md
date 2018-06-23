@@ -62,7 +62,6 @@ Any questions about the content or answers in this exam are (probably) best aske
 </details>
 <br/><br/>
 
----
 ## Question 2. Arrays, Pointers and File Handling [20 Marks]
 <details>
   <summary>
@@ -190,8 +189,7 @@ Any questions about the content or answers in this exam are (probably) best aske
   ---
 </details>
 <br/><br/>
-  
----
+
 ## Question 3. Bitwise Operators and Data Structures [20 Marks]
 <details>
   <summary>
@@ -276,8 +274,7 @@ Any questions about the content or answers in this exam are (probably) best aske
 > **Note:** "we didn't talk about packing so I can't give you this kind of question" - Alvin
 
 <br>
-  
----
+
 ## Question 4. Python Fundamentals  [20 Marks]
 <div></div>
 <b>a) [5 Marks]</b> Some of the following strings are legal Python identifiers and some are not. For each one state if the name is legal and if not, explain why:
@@ -425,8 +422,7 @@ What would the output be from the following python commands?<br>
   ---
 </details>
 <br/><br/>
-  
----
+
 ## Question 5. Writing and Reading Python Programs [20 Marks]
 <details>
   <summary>
