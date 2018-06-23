@@ -1,10 +1,12 @@
 # NWEN241 2016 Final Exam solutions
-Disclaimer: These answers have been put together due to the lack of provided solutions. Alvin has looked over them and provided feedback about the answers, however there is still a chance they may not be entirely correct.<br><br>
-<b>How this document works:</b><br>
-By default the solutions are hidden, in order to best help those actively using them during study. In order to view the answer to any question, click on it and the answer will drop down.<br>
-If you think any answers could be improved in some way, then please go ahead and open a pull request with the amendment/alteration. Or if you don't know how/don't want to, then feel free to ask myself (or others) to help make sure you have an opportunity to contribute.<br>
+Disclaimer: These answers have been put together due to the lack of provided solutions. Alvin has looked over them and provided feedback about the answers, however there is still a chance they may not be entirely correct.
+
+\
+<b>How this document works:</b>\
+By default the solutions are hidden, in order to best help those actively using them during study. In order to view the answer to any question, click on it and the answer will drop down.\
+If you think any answers could be improved in some way, then please go ahead and open a pull request with the amendment/alteration. Or if you don't know how/don't want to, then feel free to ask myself (or others) to help make sure you have an opportunity to contribute.\
 You can view all the code in the questions (with additions that allow you to run/test it) in the [code folder](/code) in this repo.
-<br><br>
+
 Any questions about the content or answers in this exam are (probably) best asked in either the [Facebook group](https://www.facebook.com/groups/210019682911907/) or the [Discord server](https://discord.gg/GPtvtK4) (in the relevant channel).
 
 ## Question 1. C General Questions [20 Marks]
@@ -43,7 +45,7 @@ Any questions about the content or answers in this exam are (probably) best aske
   </summary>
   
 ---
-C Structures are a collection of different data types/values, whilst Java Class objects can also: have associated methods, have various restrictions for variable and method access (eg "private", "protected"), and utilise inheritance.<br>
+C Structures are a collection of different data types/values, whilst Java Class objects can also: have associated methods, have various restrictions for variable and method access (eg "private", "protected"), and utilise inheritance.\
 Java also creates class objects as references, whilst C creates Structures as values. (You would use pointers to structs in C to create the same effect of references.)
 
 ---
@@ -56,8 +58,9 @@ Java also creates class objects as references, whilst C creates Structures as va
   </summary>
   
 ---
-Java manipulates objects by reference, where all object variables are references. However for method arguments, they're passed by value, or more specifically it passes the value of the reference, not the reference itself, or the object/value it's pointing to. This means it creates a new, independent, reference to the same object/values as what's passed in.<br><br>
-C is strictly pass-by-value. If you with to pass a reference into a function then you would pass a pointer, and then dereference that pointer to get the value it's pointing to.<br>
+Java manipulates objects by reference, where all object variables are references. However for method arguments, they're passed by value, or more specifically it passes the value of the reference, not the reference itself, or the object/value it's pointing to. This means it creates a new, independent, reference to the same object/values as what's passed in.
+
+C is strictly pass-by-value. If you with to pass a reference into a function then you would pass a pointer, and then dereference that pointer to get the value it's pointing to.\
 *Note: That pointer is still passed into to the function by value (I.E. it passes the location it's pointing at).*
 
 ---
@@ -290,7 +293,7 @@ int main(void) {
 </details><br>
 
 > **Note:** "we didn't talk about packing so I can't give you this kind of question" - Alvin
->   
+
 <br>
   
 ---
