@@ -116,7 +116,7 @@ Any questions about the content or answers in this exam are (probably) best aske
   
   ---
   ```c
-  char **p(int *a, int **b);
+  char **(*p)(int *a, int **b);
   ```
   ---
 </details>
